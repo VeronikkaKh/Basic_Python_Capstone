@@ -1,0 +1,28 @@
+2025-10-27 18:09:04,713 - INFO - Cleared 2 existing files
+2025-10-27 18:09:04,715 - INFO - Generating file: test.json
+2025-10-27 18:09:04,715 - INFO - Completed file: test.json
+2025-10-27 18:09:04,716 - INFO - Generating file: multi_1.json
+2025-10-27 18:09:04,717 - INFO - Completed file: multi_1.json
+2025-10-27 18:09:04,717 - INFO - Generating file: multi_2.json
+2025-10-27 18:09:04,717 - INFO - Completed file: multi_2.json
+2025-10-27 18:09:04,717 - INFO - Generating file: multi_3.json
+2025-10-27 18:09:04,717 - INFO - Completed file: multi_3.json
+2025-10-27 18:09:04,717 - INFO - Generating file: multi_4.json
+2025-10-27 18:09:04,717 - INFO - Completed file: multi_4.json
+2025-10-27 18:09:04,719 - ERROR - Invalid JSON schema: Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+  File "/Users/vkhachatryan/Desktop/Basic_Python_Capstone/magicgenerator.py", line 48, in parse_schema
+    schema = json.loads(schema_input)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py", line 345, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/json/decoder.py", line 363, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2025-10-27 18:09:04,721 - ERROR - Unsupported field type: invalid_type
+2025-10-27 18:09:04,723 - ERROR - Schema must be a dictionary
+2025-10-27 18:09:04,723 - ERROR - Schema value for 'name' must be a string
+2025-10-27 18:09:04,723 - ERROR - Schema value for 'name' must contain ':' separator
