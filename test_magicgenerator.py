@@ -187,7 +187,7 @@ class TestMagicGenerator:
     def test_invalid_schema_handling(self):
         generator = DataGenerator()
 
-        with pytest.raises(SystemExit):
+        with pytest.raises(ValueError):
             generator.parse_schema("invalid json")
         
         with pytest.raises(SystemExit):
@@ -227,13 +227,13 @@ class TestMagicGenerator:
         valid_schema = {"name": "str:rand", "age": "int:25"}
         generator.validate_schema(valid_schema)  
 
-        with pytest.raises(SystemExit):
+        with pytest.raises(ValueError):
             generator.validate_schema("not a dict")
 
-        with pytest.raises(SystemExit):
+        with pytest.raises(ValueError):
             generator.validate_schema({"name": 123})
 
-        with pytest.raises(SystemExit):
+        with pytest.raises(ValueError):
             generator.validate_schema({"name": "str_rand"})
 
 
